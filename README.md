@@ -1,1 +1,32 @@
-# Classification-Task
+# Chapter 3 – Classification
+
+Exercises and code from Chapter 3 of *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow* by Aurélien Géron.
+
+---
+
+## Notebooks
+
+### `mnist_classification.ipynb`
+
+Works through the MNIST handwritten digits dataset (60k training, 10k test samples from OpenML).
+
+- Binary classification: digit 5 vs. rest using `SGDClassifier`
+- Custom cross-validation with `StratifiedKFold`
+- Precision/recall tradeoff analysis, ROC curve (AUC 0.96)
+- Multi-class classification comparing SGD, RandomForest, and SVM
+- Confusion matrix error analysis (e.g., where 3s get confused with 5s)
+- Multi-label classification with `KNeighborsClassifier` and `ClassifierChain`
+- Image denoising using KNN
+- Data augmentation by shifting digits in all 4 directions → test accuracy goes from 97.14% to 97.66%
+
+---
+
+### `titanic_survivor.ipynb`
+
+Binary classification to predict Titanic passenger survival (891 training samples, 418 test).
+
+- EDA: missing value analysis, histograms, scatter matrix, title extraction from passenger names
+- Preprocessing pipeline: median imputation + scaling for numerics, ordinal + one-hot encoding for categoricals
+- `RandomForestClassifier` with 100 estimators
+- Cross-validation accuracy: 81.27%, Precision: 0.737, Recall: 0.768
+- Confusion matrix and ROC curve
