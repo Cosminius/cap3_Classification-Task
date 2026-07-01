@@ -30,3 +30,17 @@ Binary classification to predict Titanic passenger survival (891 training sample
 - `RandomForestClassifier` with 100 estimators
 - Cross-validation accuracy: 81.27%, Precision: 0.737, Recall: 0.768
 - Confusion matrix and ROC curve
+
+---
+
+### `spam_classifier.ipynb`
+
+Email spam detection using the SpamAssassin public corpus (2500 ham, 500 spam emails).
+
+- Downloads and parses raw emails with Python's `email` library
+- Analyzes email structure across the dataset (text/plain, text/html, multipart variants)
+- HTML-to-plain-text conversion, URL replacement, number normalization, punctuation stripping
+- NLTK `PorterStemmer` for word stemming, `urlextract` for URL detection
+- Two custom sklearn transformers: `EmailToWordCounterTransformer` and `WordCounterToVectorTransformer` (top-1000 vocab → sparse matrix)
+- Full `Pipeline` combining both transformers + `LogisticRegression`
+- Cross-validation accuracy: 99%, Test set Precision: 96.77%, Recall: 94.74%
