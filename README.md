@@ -1,6 +1,6 @@
 # Chapter 3 – Classification
 
-Exercises and code from Chapter 3 of *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow* by Aurélien Géron.
+Exercises and code from Chapter 3 of *Hands-On Machine Learning with Scikit-Learn and Pytorch* by Aurélien Géron.
 
 ---
 
